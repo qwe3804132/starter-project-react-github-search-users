@@ -6,7 +6,12 @@ import * as serviceWorker from "./serviceWorker";
 import { GithubProvider } from "./context/context";
 import { Auth0Provider } from "@auth0/auth0-react";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <GithubProvider>
+    <App />
+  </GithubProvider>,
+  document.getElementById("root")
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
